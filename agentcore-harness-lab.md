@@ -301,6 +301,10 @@ The agreement is account-level and applies across regions, so you create it once
 # Scaffold a project. Creates the IAM role, harness and memory for you.
 agentcore create --name researchagent --model-provider bedrock
 
+# agentcore creates a directory for researchagent. 
+# Change directory
+cd researchagent
+
 # Deploy the CloudFormation stack
 agentcore deploy
 
