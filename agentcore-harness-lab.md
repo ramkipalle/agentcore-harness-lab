@@ -397,6 +397,9 @@ if __name__ == "__main__":
 
 ```bash
 export SESSION_ID="$(uuidgen)"
+# If you didn't use AWS cli in the previous step and you want to get HARNESS_ARN using agentcore cli
+export HARNESS_ARN=$(agentcore status | grep 'researchagent:' | grep -o 'arn:aws:bedrock-agentcore:[^)]*')
+
 python invoke.py "Research three tropical vacation options under \$3k."
 python invoke.py "Which of those has the shortest flight?"   # same session
 ```
